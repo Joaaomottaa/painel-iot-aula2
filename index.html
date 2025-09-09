@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Monitoramento IoT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="login-container" class="container">
+        <h1>Login - Painel IoT</h1>
+        <div class="form-group">
+            <input type="email" id="email" placeholder="Seu e-mail">
+            <input type="password" id="senha" placeholder="Sua senha">
+        </div>
+        <div class="button-group">
+            <button id="btnLogin">Entrar</button>
+            <button id="btnCadastrar">Criar Conta</button>
+        </div>
+        <p id="error-message" class="error"></p>
+    </div>
+
+    <div id="dashboard-container" class="container" style="display: none;">
+        <h1>Painel de Monitoramento IoT - SENAI</h1>
+        <div class="card-container">
+            <div class="card">
+                <h2>Temperatura</h2>
+                <p id="temperatura">-- °C</p>
+            </div>
+            <div class="card">
+                <h2>Umidade</h2>
+                <p id="umidade">-- %</p>
+            </div>
+            <div class="card">
+                <h2>Sensação</h2>
+                <p id="sensacao">-- °C</p>
+            </div>
+        </div>
+        <div class="footer">
+            Última medição: <span id="ultimaMedicao">Aguardando dados...</span>
+        </div>
+        <button id="btnSair">Sair</button>
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
